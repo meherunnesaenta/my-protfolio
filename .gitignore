@@ -7,18 +7,42 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
+# Dependency directories
+node_modules/
+
+# Build outputs
+.next/
+out/
+dist/
+dist-ssr/
+
+# Environment variables ⚠️ খুব গুরুত্বপূর্ণ
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Local files
 *.local
 
-# Editor directories and files
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor / IDE
 .vscode/*
 !.vscode/extensions.json
-.idea
-.DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+.idea/
+
+# Misc
+*.pem
+*.tsbuildinfo
+
+# Debug
+coverage/
+
+# Package lock (optional)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
