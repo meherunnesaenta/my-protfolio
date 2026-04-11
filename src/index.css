@@ -180,3 +180,13 @@
     display: none;
   }
 }
+/* মোবাইল স্ক্রল ফিক্স - শুধু এইটুকু */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+section {
+  overflow-x: hidden;
+  width: 100%;
+}

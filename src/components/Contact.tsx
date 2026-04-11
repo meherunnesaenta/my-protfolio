@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail, Send, Twitter } from "lucide-react";
+import { Github, Linkedin, Mail, Send } from "lucide-react";
 import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 
@@ -145,8 +145,7 @@ const Contact = () => {
               {[
                 { icon: Mail, label: "meherunnesaenta1@gmail.com", href: "mailto:meherunnesaenta1@gmail.com" },
                 { icon: Github, label: "github.com/meherunnesaenta", href: "https://github.com/meherunnesaenta" },
-                { icon: Linkedin, label: "linkedin.com/in/meherunnesaenta", href: "https://linkedin.com/in/meherun-nesa-enta" },
-                { icon: Twitter, label: "@meherunnesaenta", href: "https://twitter.com/meherunnesaenta" },
+                { icon: Linkedin, label: "linkedin.com/in/meherunnesaenta", href: "https://linkedin.com/in/meherun-nesa-enta" }
               ].map((link, i) => (
                 <motion.a
                   key={link.label}
