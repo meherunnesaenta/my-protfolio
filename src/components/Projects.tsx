@@ -12,13 +12,90 @@ import { Separator } from "./ui/separator";
 import project1 from "../assets/styledecor.png";
 import project2 from "../assets/care.png";
 import project3 from "../assets/krishlink.png";
+import project4 from "../assets/taskearn.png"; // Add your TaskEarn screenshot
 
 const projects = [
-      {
+  {
     id: 1,
+    title: "TaskEarn – Micro Task & Earning Platform",
+    shortTitle: "Micro Task",
+    description: "A full-stack micro-task platform where users can earn money by completing small tasks or post tasks to get work done by verified workers.",
+    fullDescription: `Micro Task is a comprehensive micro-task earning platform connecting workers and buyers.
+
+## 👷 For Workers:
+• Browse and filter available tasks by category
+• Submit task completions with detailed proof
+• Track submission status (pending/approved/rejected)
+• View earnings in coins (20 coins = $1)
+• Request withdrawal with minimum 200 coins ($10)
+• View withdrawal history and status
+• Complete profile management
+• Real-time notifications for approvals/rejections
+
+## 🛒 For Buyers:
+• Create tasks with detailed instructions
+• Set required workers and payable amount
+• Upload task images (ImgBB integration)
+• Review worker submissions
+• Approve/Reject submissions with coin rewards
+• Purchase coins via Stripe payment
+• View payment history and task statistics
+• Edit/Delete posted tasks
+
+## 👑 For Admin:
+• Complete platform overview dashboard
+• Manage all users (update roles, delete users)
+• Manage all tasks across platform
+• Process withdrawal requests (approve/reject)
+• View platform analytics and reports
+• Monitor platform growth and revenue
+
+## 🎨 General Features:
+• Modern responsive design with Dark/Light theme
+• Secure JWT authentication
+• Mobile-friendly responsive layout
+• Real-time notification system
+• Interactive dashboard with statistics
+• Stripe payment integration
+• Image upload with ImgBB
+• Pagination on all lists
+• Role-based access control (Worker/Buyer/Admin)
+
+## 💰 Business Logic:
+• Registration Bonus: Workers get 10 coins, Buyers get 50 coins
+• Task Reward: 1 USD = 20 coins
+• Withdrawal: 20 coins = 1 USD (Minimum 200 coins = $10)`,
+    image: project4,
+    tags: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT", "Stripe", "Tailwind CSS", "ImgBB"],
+    liveUrl: "https://microtash.vercel.app/",
+    githubUrl: "https://github.com/meherunnesaenta/Micro-task-platform",
+    gradient: "from-blue-500 to-cyan-500",
+    features: [
+      "3 Role System (Worker/Buyer/Admin)",
+      "Task Creation & Submission",
+      "Coin Economy (20 coins = $1)",
+      "Stripe Payment Integration",
+      "Withdrawal Management",
+      "Real-time Notifications",
+      "Dark/Light Theme",
+      "Responsive Dashboard"
+    ],
+    techStack: {
+      frontend: "React.js, Tailwind CSS, DaisyUI, Framer Motion",
+      backend: "Node.js, Express.js",
+      database: "MongoDB",
+      auth: "JWT, bcrypt",
+      payment: "Stripe",
+      imageHosting: "ImgBB API",
+    },
+    challenges: "Implementing a dual-currency system (coins for tasks, dollars for withdrawals) and maintaining real-time balance updates across user actions.",
+    solutions: "Built a transaction-based coin system with automatic conversion (20 coins = $1) and real-time balance updates using JWT token refresh after each transaction."
+  },
+  {
+    id: 2,
     title: "Care.IO – Babies and Older Caring Service Booking System",
     shortTitle: "Care.IO",
-    description: "A full-stack web-based Caring Service booking platform that allows users to helping hand or other  caring service for babies and olders, track real-time project status, make secure Stripe payments, and manage service efficiently.",
+    description: "A full-stack web-based Caring Service booking platform that allows users to helping hand or other caring service for babies and olders, track real-time project status, make secure Stripe payments, and manage service efficiently.",
     fullDescription: `Care.IO is a comprehensive service booking platform designed specifically for baby and elderly care services. 
 
 Key Features:
@@ -61,17 +138,15 @@ Technical Highlights:
     solutions: "Used Stripe webhooks for payment confirmation and WebSockets for real-time status updates with optimistic UI updates."
   },
   {
-    id: 2,
+    id: 3,
     title: "StyleDecor – Smart Home & Ceremony Decoration Booking System",
     shortTitle: "StyleDecor",
     description: "A full-stack web-based decoration booking platform that allows users to book home & ceremony decoration services, track real-time project status, make secure Stripe payments, and manage bookings efficiently.",
     fullDescription: `StyleDecor is an innovative decoration booking platform that transforms how people plan their events and home decorations.
 
-
 ## ✨ Key Features
 
 ### 👤 User Features
-
 * Browse decoration services & packages
 * Search services by name
 * Filter by category & budget
@@ -82,10 +157,7 @@ Technical Highlights:
 * View booking history & receipts
 * Cancel or update bookings
 
----
-
 ### 🛠️ Admin Features
-
 * Manage decorators (Create, Update, Disable)
 * Manage services & packages (CRUD)
 * Assign decorators for projects
@@ -94,51 +166,29 @@ Technical Highlights:
 * Analytics dashboard with charts
 * Service demand visualization
 
----
-
 ### 🎨 Decorator Features
-
 * View assigned projects
 * Daily schedule tracking
-* Update project status step-by-step:
-
-  * Assigned
-  * Planning Phase
-  * Materials Prepared
-  * On the Way
-  * Setup in Progress
-  * Completed
+* Update project status step-by-step
 * View earnings summary
 * Track payment history
 
----
-
 ## 🔐 Authentication & Security
-
 * Firebase Authentication (Email/Password & Social Login)
 * JWT-based authentication
 * Role-based access control (Admin, Decorator, User)
-* Secure environment variables
-
----
 
 ## 💳 Payment System
-
 * Stripe integration
 * Secure transactions
 * Payment receipt in dashboard
 
----
-
 ## 🌍 Additional Features
-
-* 🗺️ Interactive map (React Leaflet)
 * 🎬 Animations (Framer Motion)
 * 🔄 Global loading & skeleton UI
 * ⚠️ Error handling system
 * 🔔 Toast notifications
-* 📱 Fully responsive design
-`,
+* 📱 Fully responsive design`,
     image: project1,
     tags: ["React.js", "Tailwind CSS", "Node.js", "Express.js", "MongoDB", "JWT", "Stripe", "Firebase Auth"],
     liveUrl: "https://cheery-cranachan-6e2445.netlify.app/",
@@ -163,7 +213,7 @@ Technical Highlights:
     solutions: "Built an interactive canvas with real-time design elements and color customization options."
   },
   {
-    id: 3,
+    id: 4,
     title: "AgriConnect – Farmer & Buyer Marketplace Platform",
     shortTitle: "AgriConnect",
     description: "A full-stack marketplace platform that connects farmers directly with buyers. Farmers can list crops with detailed information, while buyers can send purchase interest requests.",
@@ -222,8 +272,8 @@ const Projects = () => {
 
   return (
     <>
-      <section id="projects" className="relative py-24 md:py-32 overflow-hidden bg-gradient-to-b from-background via-primary/5 to-background">
-        
+      <section id="projects" className="relative section-padding overflow-hidden bg-gradient-to-b from-background via-primary/5 to-background">
+
         {/* Animated Background */}
         <div className="absolute inset-0 overflow-hidden">
           <motion.div
@@ -243,8 +293,8 @@ const Projects = () => {
           />
         </div>
 
-        <div className="container mx-auto px-4 md:px-6 max-w-7xl relative z-10">
-          
+        <div className="px-4 md:px-6">
+
           {/* Section Header */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -264,7 +314,7 @@ const Projects = () => {
                 My Portfolio
               </Badge>
             </motion.div>
-            
+
             <h2 className="text-5xl sm:text-6xl md:text-7xl font-bold">
               Featured <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent bg-[length:200%] animate-gradient-shift">Projects</span>
             </h2>
@@ -286,14 +336,14 @@ const Projects = () => {
               >
                 <Card className="group h-full hover:shadow-2xl transition-all duration-500 overflow-hidden border-border/50">
                   {/* Gradient Border Top */}
-                  <motion.div 
+                  <motion.div
                     className={`h-1.5 bg-gradient-to-r ${project.gradient}`}
                     initial={{ scaleX: 0 }}
                     whileInView={{ scaleX: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: i * 0.1 }}
                   />
-                  
+
                   {/* Image Container */}
                   <div className="relative overflow-hidden h-48">
                     <img
@@ -302,12 +352,12 @@ const Projects = () => {
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    
+
                     {/* View Details Button Overlay */}
                     <Button
                       size="sm"
                       variant="secondary"
-                      className="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0 bg-white/90 dark:bg-black/90"
+                      className="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0  dark:bg-black/90"
                       onClick={() => handleViewDetails(project)}
                     >
                       <Eye className="w-3 h-3 mr-1" />
@@ -345,17 +395,17 @@ const Projects = () => {
 
                     {/* Action Buttons */}
                     <div className="flex gap-2 pt-2">
-                      <Button 
-                        size="sm" 
+                      <Button
+                        size="sm"
                         className="flex-1 group/btn"
                         onClick={() => window.open(project.liveUrl, '_blank')}
                       >
                         <ExternalLink className="w-3 h-3 mr-1 group-hover/btn:rotate-12 transition-transform" />
                         Live Demo
                       </Button>
-                      <Button 
-                        size="sm" 
-                        variant="outline" 
+                      <Button
+                        size="sm"
+                        variant="outline"
                         className="flex-1"
                         onClick={() => window.open(project.githubUrl, '_blank')}
                       >
@@ -363,11 +413,11 @@ const Projects = () => {
                         Code
                       </Button>
                     </div>
-                    
-                    <Button 
-                      variant="ghost" 
-                      size="sm" 
-                      className="w-full mt-2 text-muted-foreground  group/btn"
+
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      className="w-full mt-2 text-muted-foreground group/btn"
                       onClick={() => handleViewDetails(project)}
                     >
                       <Eye className="w-3 h-3 mr-1 group-hover/btn:scale-110 transition-transform" />
@@ -408,7 +458,7 @@ const Projects = () => {
                   <div className="whitespace-pre-wrap text-sm leading-relaxed text-muted-foreground">
                     {selectedProject.fullDescription}
                   </div>
-                  
+
                   <div className="mt-4">
                     <h4 className="font-semibold mb-3 flex items-center gap-2">
                       <Star className="w-4 h-4 text-primary" />
@@ -416,8 +466,8 @@ const Projects = () => {
                     </h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                       {selectedProject.features.map((feature, idx) => (
-                        <motion.div 
-                          key={idx} 
+                        <motion.div
+                          key={idx}
                           className="flex items-center gap-2 text-sm text-muted-foreground"
                           initial={{ opacity: 0, x: -10 }}
                           animate={{ opacity: 1, x: 0 }}
@@ -445,7 +495,7 @@ const Projects = () => {
                       </div>
                     ))}
                   </div>
-                  
+
                   <div className="flex flex-wrap gap-2 mt-4">
                     {selectedProject.tags.map((tag) => (
                       <Badge key={tag} variant="secondary" className="hover:bg-primary/10 transition-colors">
@@ -465,7 +515,7 @@ const Projects = () => {
                       {selectedProject.challenges}
                     </p>
                   </div>
-                  
+
                   <div>
                     <h4 className="font-semibold mb-2 flex items-center gap-2">
                       <Rocket className="w-4 h-4 text-primary" />
@@ -490,8 +540,6 @@ const Projects = () => {
                   </div>
                 </TabsContent>
               </Tabs>
-
-
             </>
           )}
         </DialogContent>

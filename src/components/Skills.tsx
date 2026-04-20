@@ -74,7 +74,7 @@ const Skills = () => {
   const allSkills = skillCategories.flatMap(cat => cat.skills);
 
   return (
-    <section id="skills" className="relative py-24 md:py-32 overflow-x-hidden w-full bg-gradient-to-b from-background via-primary/5 to-background">
+    <section id="skills" className="relative section-padding overflow-x-hidden w-full bg-gradient-to-b from-background via-primary/5 to-background">
       
       {/* Animated Background */}
       <div className="absolute inset-0 overflow-hidden">

@@ -51,7 +51,7 @@ const timeline = [
 
 const Experience = () => {
   return (
-    <section id="experience" className="relative py-24 md:py-32 overflow-x-hidden w-full bg-gradient-to-b from-background via-primary/5 to-background">
+    <section id="experience" className="relative section-padding overflow-x-hidden w-full bg-gradient-to-b from-background via-primary/5 to-background">
       
       {/* Animated Background */}
       <div className="absolute inset-0 overflow-hidden">
@@ -223,7 +223,7 @@ const Experience = () => {
             <CardContent className="p-6 md:p-8">
               <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 text-center">
                 {[
-                  { icon: Code2, label: "Projects Built", value: "3" },
+                  { icon: Code2, label: "Projects Built", value: "4" },
                   { icon: Briefcase, label: "Internship", value: "1" },
                   { icon: GraduationCap, label: "Degrees", value: "2" },
                 ].map((stat, idx) => (

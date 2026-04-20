@@ -10,7 +10,7 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "./ui/t
 const About = () => {
   return (
     <TooltipProvider>
-      <section id="about" className="relative py-24 md:py-32 overflow-x-hidden w-full bg-gradient-to-b from-background via-primary/5 to-background">
+      <section id="about" className="relative section-padding overflow-x-hidden w-full bg-gradient-to-b from-background via-primary/5 to-background">
         
         {/* Animated Background */}
         <div className="absolute inset-0 overflow-hidden">
@@ -186,7 +186,7 @@ const About = () => {
                         <Button 
                           size="lg" 
                           className="group relative overflow-hidden bg-gradient-to-r from-primary to-secondary hover:shadow-lg hover:shadow-primary/25 transition-all duration-300 text-primary-foreground"
-                          onClick={() => window.open('/meherun nesa enta.pdf', '_blank')}
+                          onClick={() => window.open('https://drive.google.com/file/d/1tF8VKxhGfDsNd-D2-Hp7JjYs55rA6k6t/view?usp=sharing', '_blank')}
                         >
                           <ArrowDownToLine className="w-4 h-4 mr-2 group-hover:translate-y-1 transition-transform duration-300" />
                           View My CV
