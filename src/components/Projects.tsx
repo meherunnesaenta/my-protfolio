@@ -12,7 +12,8 @@ import { Separator } from "./ui/separator";
 import project1 from "../assets/styledecor.png";
 import project2 from "../assets/care.png";
 import project3 from "../assets/krishlink.png";
-import project4 from "../assets/taskearn.png"; // Add your TaskEarn screenshot
+import project4 from "../assets/taskearn.png";
+import project5 from "../assets/kodawave.png"; 
 
 const projects = [
   {
@@ -118,7 +119,7 @@ Technical Highlights:
     tags: ["Next.js", "Tailwind CSS", "Node.js", "Express.js", "MongoDB", "JWT", "Stripe", "Next Auth"],
     liveUrl: "https://careio-gamma.vercel.app/",
     githubUrl: "https://github.com/meherunnesaenta/Careio",
-    gradient: "from-pink-500 to-purple-500",
+    gradient: "from-blue-500 to-purple-500",
     features: [
       "User Authentication & Authorization",
       "Service Booking System",
@@ -258,14 +259,72 @@ Technical Highlights:
     challenges: "Building a trust-based marketplace where farmers and buyers can safely transact.",
     solutions: "Implemented user verification system, rating system, and secure messaging platform."
   },
+    {
+    id: 5,
+    title: "Kodawave – Digital Agency Website",
+    shortTitle: "Kodawave",
+    description: "A modern, animated 3D website built with React.js, Tailwind CSS, and Framer Motion for a digital innovation agency.",
+    fullDescription: `Kodawave is a premium digital agency website that showcases modern web development capabilities with stunning 3D animations.
 
+## 🎨 Design & Animations
+• Interactive 3D sphere animation using Three.js
+• Smooth scroll-triggered animations with Framer Motion
+• Custom mouse follower with hover effects
+• Glassmorphism design elements
+• Micro-interactions throughout the interface
+
+## 📄 Pages Implemented
+• **Home Page** - Hero section with 3D sphere, services overview, benefits, testimonials, and CTA
+• **Services Page** - Service cards, pricing plans (Starter/Growth/Premium), conversion-focused CTA
+• **About Page** - Company vision, team section, achievements, client success stats, testimonials
+• **Blog Page** - Blog listing with featured images, excerpts, dynamic routing for individual posts
+• **Contact Page** - Contact form with validation, email/phone details, embedded Google Map
+
+## 🛠️ Technical Features
+• **Dark/Light Mode** - Theme toggle with DaisyUI custom themes
+• **3D Graphics** - Three.js + React Three Fiber for immersive 3D sphere animation
+• **Responsive Design** - Fully responsive across all devices (mobile, tablet, desktop)
+• **Dynamic Routing** - React Router for seamless page navigation
+• **Performance Optimized** - Lazy loading, code splitting, optimized bundle size
+
+## 🎯 Key Achievements
+• 98% Lighthouse performance score
+• Fully responsive across all devices
+• Smooth 60fps animations
+• Production-ready code structure`,
+    image: project5,
+    tags: ["React.js", "Three.js", "Tailwind CSS", "Framer Motion", "DaisyUI", "React Router", "Vite"],
+    liveUrl: "https://kodawavetask.netlify.app/",
+    githubUrl: "https://github.com/meherunnesaenta/kodawave-intern-task",
+    gradient: "from-teal-500 to-cyan-500",
+    features: [
+      "3D Interactive Sphere Animation",
+      "Dark/Light Mode Toggle",
+      "Custom Mouse Follower",
+      "Dynamic Blog with Routing",
+      "Responsive Design",
+      "Pricing Plans with Toggle",
+      "Contact Form with Validation",
+      "Smooth Page Transitions"
+    ],
+    techStack: {
+      frontend: "React.js, Tailwind CSS, DaisyUI, Framer Motion",
+      "3D Graphics": "Three.js, React Three Fiber",
+      routing: "React Router DOM",
+      animations: "Framer Motion, GSAP",
+      buildTool: "Vite",
+      deployment: "Netlify",
+    },
+    challenges: "Implementing a smooth 3D sphere that responds to theme changes and maintaining performance while using heavy 3D animations.",
+    solutions: "Used CSS variables for dynamic theme colors in Three.js and implemented lazy loading for the 3D component to improve initial load time."
+  }
 ];
 
 const Projects = () => {
-  const [selectedProject, setSelectedProject] = React.useState<typeof projects[0] | null>(null);
+  const [selectedProject, setSelectedProject] = React.useState(null);
   const [isDialogOpen, setIsDialogOpen] = React.useState(false);
 
-  const handleViewDetails = (project: typeof projects[0]) => {
+  const handleViewDetails = (project) => {
     setSelectedProject(project);
     setIsDialogOpen(true);
   };
@@ -275,7 +334,7 @@ const Projects = () => {
       <section id="projects" className="relative section-padding overflow-hidden bg-gradient-to-b from-background via-primary/5 to-background">
 
         {/* Animated Background */}
-        <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <motion.div
             className="absolute top-20 right-10 w-96 h-96 bg-primary/10 rounded-full blur-3xl"
             animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.1, 0.3] }}
@@ -293,7 +352,7 @@ const Projects = () => {
           />
         </div>
 
-        <div className="px-4 md:px-6">
+        <div className="px-4 md:px-6 max-w-7xl mx-auto">
 
           {/* Section Header */}
           <motion.div
@@ -354,15 +413,15 @@ const Projects = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                     {/* View Details Button Overlay */}
-                    <Button
-                      size="sm"
-                      variant="secondary"
-                      className="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0  dark:bg-black/90"
+                    <button
+                      className="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0"
                       onClick={() => handleViewDetails(project)}
                     >
-                      <Eye className="w-3 h-3 mr-1" />
-                      Quick View
-                    </Button>
+                      <span className="inline-flex items-center gap-1 px-3 py-1.5 text-sm font-medium rounded-md bg-black/90 text-white hover:bg-black transition-colors">
+                        <Eye className="w-3 h-3" />
+                        Quick View
+                      </span>
+                    </button>
                   </div>
 
                   <CardHeader>
@@ -382,47 +441,42 @@ const Projects = () => {
                     {/* Tags */}
                     <div className="flex flex-wrap gap-1.5">
                       {project.tags.slice(0, 4).map((tag) => (
-                        <Badge key={tag} variant="outline" className="text-xs hover:bg-primary/10 transition-colors">
+                        <span key={tag} className="inline-flex items-center px-2 py-0.5 text-xs font-medium rounded-md border border-border bg-background hover:bg-primary/10 transition-colors">
                           {tag}
-                        </Badge>
+                        </span>
                       ))}
                       {project.tags.length > 4 && (
-                        <Badge variant="outline" className="text-xs">
+                        <span className="inline-flex items-center px-2 py-0.5 text-xs font-medium rounded-md border border-border bg-background">
                           +{project.tags.length - 4}
-                        </Badge>
+                        </span>
                       )}
                     </div>
 
                     {/* Action Buttons */}
                     <div className="flex gap-2 pt-2">
-                      <Button
-                        size="sm"
-                        className="flex-1 group/btn"
+                      <button
+                        className="flex-1 inline-flex items-center justify-center gap-1 px-3 py-1.5 text-sm font-medium rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
                         onClick={() => window.open(project.liveUrl, '_blank')}
                       >
-                        <ExternalLink className="w-3 h-3 mr-1 group-hover/btn:rotate-12 transition-transform" />
+                        <ExternalLink className="w-3 h-3" />
                         Live Demo
-                      </Button>
-                      <Button
-                        size="sm"
-                        variant="outline"
-                        className="flex-1"
+                      </button>
+                      <button
+                        className="flex-1 inline-flex items-center justify-center gap-1 px-3 py-1.5 text-sm font-medium rounded-md border border-border bg-background hover:bg-accent transition-colors"
                         onClick={() => window.open(project.githubUrl, '_blank')}
                       >
-                        <Github className="w-3 h-3 mr-1" />
+                        <Github className="w-3 h-3" />
                         Code
-                      </Button>
+                      </button>
                     </div>
 
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      className="w-full mt-2 text-muted-foreground group/btn"
+                    <button
+                      className="w-full inline-flex items-center justify-center gap-1 px-3 py-1.5 text-sm font-medium rounded-md text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
                       onClick={() => handleViewDetails(project)}
                     >
-                      <Eye className="w-3 h-3 mr-1 group-hover/btn:scale-110 transition-transform" />
+                      <Eye className="w-3 h-3" />
                       View Details
-                    </Button>
+                    </button>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -473,7 +527,9 @@ const Projects = () => {
                           animate={{ opacity: 1, x: 0 }}
                           transition={{ delay: idx * 0.05 }}
                         >
-                          <CheckCircle2 className="w-4 h-4 text-green-500" />
+                          <svg className="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                          </svg>
                           {feature}
                         </motion.div>
                       ))}
@@ -498,9 +554,9 @@ const Projects = () => {
 
                   <div className="flex flex-wrap gap-2 mt-4">
                     {selectedProject.tags.map((tag) => (
-                      <Badge key={tag} variant="secondary" className="hover:bg-primary/10 transition-colors">
+                      <span key={tag} className="inline-flex items-center px-2 py-1 text-xs font-medium rounded-md bg-secondary text-secondary-foreground hover:bg-primary/10 transition-colors">
                         {tag}
-                      </Badge>
+                      </span>
                     ))}
                   </div>
                 </TabsContent>
@@ -529,14 +585,20 @@ const Projects = () => {
                   <Separator />
 
                   <div className="flex gap-3 pt-2">
-                    <Button className="flex-1 group" onClick={() => window.open(selectedProject.liveUrl, '_blank')}>
-                      <ExternalLink className="w-4 h-4 mr-2 group-hover:rotate-12 transition-transform" />
+                    <button
+                      className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+                      onClick={() => window.open(selectedProject.liveUrl, '_blank')}
+                    >
+                      <ExternalLink className="w-4 h-4" />
                       View Live Project
-                    </Button>
-                    <Button variant="outline" className="flex-1" onClick={() => window.open(selectedProject.githubUrl, '_blank')}>
-                      <Github className="w-4 h-4 mr-2" />
+                    </button>
+                    <button
+                      className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium rounded-md border border-border bg-background hover:bg-accent transition-colors"
+                      onClick={() => window.open(selectedProject.githubUrl, '_blank')}
+                    >
+                      <Github className="w-4 h-4" />
                       View Source Code
-                    </Button>
+                    </button>
                   </div>
                 </TabsContent>
               </Tabs>
@@ -547,12 +609,5 @@ const Projects = () => {
     </>
   );
 };
-
-// Helper component for checkmark
-const CheckCircle2 = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-  </svg>
-);
 
 export default Projects;
