@@ -11,48 +11,48 @@ const About = () => {
   return (
     <TooltipProvider>
       <section id="about" className="relative section-padding overflow-x-hidden w-full bg-gradient-to-b from-background via-primary/5 to-background">
-        
+
         {/* Animated Background */}
         <div className="absolute inset-0 overflow-hidden">
           <motion.div
             className="absolute -top-40 -right-40 w-80 h-80 bg-primary/20 rounded-full blur-3xl"
-            animate={{ 
-              scale: [1, 1.2, 1], 
+            animate={{
+              scale: [1, 1.2, 1],
               opacity: [0.3, 0.15, 0.3],
               x: [0, -20, 0],
               y: [0, -30, 0]
             }}
-            transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
+            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
           />
           <motion.div
             className="absolute -bottom-40 -left-40 w-80 h-80 bg-secondary/20 rounded-full blur-3xl"
-            animate={{ 
-              scale: [1, 1.3, 1], 
+            animate={{
+              scale: [1, 1.3, 1],
               opacity: [0.25, 0.1, 0.25],
               x: [0, 20, 0],
               y: [0, 30, 0]
             }}
-            transition={{ duration: 15, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1 }}
           />
           <motion.div
             className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-primary/5 rounded-full blur-3xl"
             animate={{ scale: [1, 1.5, 1], opacity: [0.2, 0.05, 0.2] }}
-            transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
+            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
           />
         </div>
 
         <div className="container-responsive">
-          
+
           {/* Header */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
             className="text-center mb-12 md:mb-16"
           >
-            
-            <motion.h2 
+
+            <motion.h2
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold px-4"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -61,8 +61,8 @@ const About = () => {
             >
               About <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent bg-[length:200%] animate-gradient-shift">Me</span>
             </motion.h2>
-            
-            <motion.p 
+
+            <motion.p
               className="mt-4 md:mt-6 text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-4"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -75,7 +75,7 @@ const About = () => {
 
           {/* Main Content */}
           <div className="space-y-8 md:space-y-10">
-            
+
             {/* Bio Card */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -84,16 +84,16 @@ const About = () => {
               transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
             >
               <Card className="border-border/50 shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden group bg-card">
-                <motion.div 
+                <motion.div
                   className="h-1.5 bg-gradient-to-r from-primary via-secondary to-primary"
                   initial={{ scaleX: 0 }}
                   whileInView={{ scaleX: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, delay: 0.3 }}
                 />
-                
+
                 <CardContent className="p-6 md:p-10">
-                  
+
                   {/* Bio Text */}
                   <div className="space-y-5 text-muted-foreground leading-relaxed">
                     <motion.p
@@ -102,34 +102,31 @@ const About = () => {
                       viewport={{ once: true }}
                       transition={{ duration: 0.5, delay: 0.4, ease: "easeOut" }}
                     >
-                      Hey there! I'm Meherun Nesa Enta, 
-                      a passionate full stack web developer. I'm on an exciting journey of learning 
-                      and growing as a developer, and I love every moment of it!
-                    </motion.p> 
-                    
+                      I'm Meherun Nesa Enta, a passionate and self-motivated Full Stack Web Developer. I started my coding journey with curiosity, and every day I learn something new — from building responsive frontends with React to designing REST APIs with Node.js and Express.
+                    </motion.p>
+
                     <motion.p
                       initial={{ opacity: 0, x: -20 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
                     >
-                      I started my coding journey with curiosity and determination. Every day, I learn something new, 
-                      face new challenges, and become a better developer than I was yesterday. I believe that 
-                      consistency and passion matter more than experience.
+                      I believe consistency matters more than talent. That's why I've already built 30+ projects on GitHub, solved 1k+ rating problems on CodeChef, and constantly push myself to learn modern technologies like TanStack Query, Zustand, NestJS, and Socket.IO.
                     </motion.p>
-                    
+
                     <motion.p
                       initial={{ opacity: 0, x: -20 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.5, delay: 0.6, ease: "easeOut" }}
                     >
-                      Currently, I'm focusing on building real-world projects that solve problems. I enjoy working 
-                      with modern technologies and creating beautiful, functional web applications.
+                      
+                      Currently, I'm focused on building real-world applications that solve problems. I enjoy working in teams, sharing knowledge, and turning ideas into working software. I'm looking for a role where I can grow as a developer while contributing to meaningful projects.
+                      Let's build something great together.
                     </motion.p>
-                    
+
                     {/* Quote */}
-                    <motion.div 
+                    <motion.div
                       className="relative py-4"
                       initial={{ opacity: 0, scale: 0.95 }}
                       whileInView={{ opacity: 1, scale: 1 }}
@@ -142,9 +139,9 @@ const About = () => {
                       </p>
                       <Separator className="mt-3 bg-border" />
                     </motion.div>
-                    
+
                     {/* Currently Learning */}
-                    <motion.div 
+                    <motion.div
                       className="bg-gradient-to-r from-primary/5 to-secondary/5 rounded-xl p-4 mt-4"
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
@@ -174,7 +171,7 @@ const About = () => {
                   </div>
 
                   {/* CV Button */}
-                  <motion.div 
+                  <motion.div
                     className="mt-8 flex justify-center"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -183,8 +180,8 @@ const About = () => {
                   >
                     <Tooltip>
                       <TooltipTrigger asChild>
-                        <Button 
-                          size="lg" 
+                        <Button
+                          size="lg"
                           className="group relative overflow-hidden bg-gradient-to-r from-primary to-secondary hover:shadow-lg hover:shadow-primary/25 transition-all duration-300 text-primary-foreground"
                           onClick={() => window.open('https://drive.google.com/file/d/1tF8VKxhGfDsNd-D2-Hp7JjYs55rA6k6t/view?usp=sharing', '_blank')}
                         >
@@ -200,8 +197,8 @@ const About = () => {
                       </TooltipContent>
                     </Tooltip>
                   </motion.div>
-                  
-                  <motion.p 
+
+                  <motion.p
                     className="text-center text-xs text-muted-foreground mt-4"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}

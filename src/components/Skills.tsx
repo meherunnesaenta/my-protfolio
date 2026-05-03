@@ -29,7 +29,9 @@ const Skills = () => {
         "Next.js",
         "JavaScript",
         "Tailwind CSS",
-        "HTML/CSS",
+        "TanStack Query",
+        "Zustand / Redux",
+        "REST APIs",
         "Framer Motion"
       ],
     },
@@ -40,6 +42,9 @@ const Skills = () => {
       skills: [
         "Node.js",
         "Express.js",
+        "NestJS" ,
+        "GraphQL (Apollo Server)",
+        "Socket.IO / WebSockets",
         "REST API",
         "NextAuth",
         "JWT Authentication",
@@ -53,6 +58,7 @@ const Skills = () => {
       skills: [
         "MongoDB",
         "Mongoose",
+        "PostgreSQL + TypeORM",
         "Firebase"
       ],
     },
@@ -66,6 +72,8 @@ const Skills = () => {
         "Postman",
         "Vercel",
         "Netlify",
+        "GitHub Actions (CI/CD)",
+        "AWS EC2 / DigitalOcean VPS",
         "Figma"
       ],
     },
@@ -81,12 +89,12 @@ const Skills = () => {
         <motion.div
           className="absolute top-20 right-20 w-96 h-96 bg-primary/20 rounded-full blur-3xl"
           animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.1, 0.3] }}
-          transition={{ duration: 15, repeat: Infinity }}
+          transition={{ duration: 5, repeat: Infinity }}
         />
         <motion.div
           className="absolute bottom-20 left-20 w-96 h-96 bg-secondary/20 rounded-full blur-3xl"
           animate={{ scale: [1, 1.3, 1], opacity: [0.2, 0.1, 0.2] }}
-          transition={{ duration: 12, repeat: Infinity }}
+          transition={{ duration: 5, repeat: Infinity }}
         />
       </div>
 

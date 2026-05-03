@@ -28,7 +28,7 @@ const itemVariants = {
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-background via-background to-muted overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-background via-background to-muted overflow-hidden">
       {/* Background Glow */}
       <div className="absolute inset-0 -z-10">
         <motion.div
